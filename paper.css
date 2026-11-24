@@ -1,0 +1,145 @@
+:root{
+  --bg:#0A0C0F; --panel:#13171D; --panel-2:#171C23; --line:#262C35; --line-soft:#1d232b;
+  --ink:#E7EBF1; --ink-mid:#AEB6C2; --ink-dim:#737D8B;
+  --off:#F5A524; --off-bright:#FFC25A; --def:#35CFE0; --def-deep:#1f9aa8; --crit:#E5484D;
+  --maxw:820px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(900px 500px at 85% -10%, rgba(245,165,36,.06), transparent 60%),
+    radial-gradient(900px 600px at -10% 30%, rgba(53,207,224,.05), transparent 55%);
+  background-attachment:fixed;
+}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* sticky top bar */
+header.bar{position:sticky;top:0;z-index:50;background:rgba(10,12,15,.82);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:14px;padding:11px 22px}
+.bar .brand{font-family:"IBM Plex Mono";font-weight:700;font-size:13px;letter-spacing:.02em;color:var(--ink);
+  display:flex;align-items:center;gap:8px;white-space:nowrap}
+.bar .dot{width:8px;height:8px;border-radius:2px;background:linear-gradient(135deg,var(--off),var(--def));
+  box-shadow:0 0 12px rgba(245,165,36,.5)}
+.bar .back{margin-left:auto;font-family:"IBM Plex Mono";font-size:12px;color:var(--ink-dim);
+  text-decoration:none;padding:6px 10px;border-radius:6px;transition:.15s;white-space:nowrap}
+.bar .back:hover{color:var(--ink);background:var(--panel)}
+
+main{max-width:var(--maxw);margin:0 auto;padding:54px 22px 40px}
+.eyebrow{font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-dim);margin-bottom:16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.eyebrow .box{font-weight:600}
+.eyebrow .box.wb{color:var(--off-bright)}
+.eyebrow .box.bb{color:var(--def)}
+/* Page selector (nav.js): the eyebrow label opens a jump-to-page list. The select is invisible
+   and covers the label; 16px font stops iOS zooming on focus. */
+.eyebrow .page-pick{position:relative;cursor:pointer;border-bottom:1px dashed currentColor;padding-bottom:1px}
+.eyebrow .page-pick::after{content:" \25BE";letter-spacing:0}
+.eyebrow .page-pick:hover{filter:brightness(1.2)}
+.eyebrow .page-pick:focus-within{outline:2px solid var(--def);outline-offset:3px;border-radius:3px}
+.eyebrow .page-pick-caret{cursor:text}
+.page-pick-caret .page-select{left:auto;width:1.4em}
+.page-select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px;margin:0;border:0;padding:0;color:var(--ink);background:var(--panel);color-scheme:dark;text-transform:none;letter-spacing:normal;font-family:"IBM Plex Mono",ui-monospace,monospace}
+h1{font-family:"IBM Plex Mono";font-weight:700;font-size:clamp(28px,5vw,42px);line-height:1.08;
+  margin:0 0 10px;letter-spacing:-.01em}
+.authors{color:var(--ink-dim);font-size:13.5px;margin:0 0 22px;font-family:"IBM Plex Mono"}
+
+/* paper link banner — pinned at top */
+.paperlink{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--off);
+  border-radius:10px;padding:14px 16px;margin:0 0 30px}
+.paperlink .lbl{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-dim);flex-shrink:0}
+.paperlink a{color:var(--def);text-decoration:none;font-weight:600;font-size:15px;word-break:break-word}
+.paperlink a:hover{text-decoration:underline}
+
+h2{font-family:"IBM Plex Mono";font-weight:600;font-size:19px;margin:34px 0 10px;letter-spacing:-.01em;color:var(--ink)}
+p{margin:0 0 15px;color:var(--ink-mid);max-width:68ch}
+p strong{color:var(--ink);font-weight:600}
+.lead{font-size:18px;color:var(--ink)}
+ul{margin:0 0 15px;padding-left:0;list-style:none}
+li{color:var(--ink-mid);padding:6px 0 6px 22px;position:relative;max-width:68ch}
+li::before{content:"\25B8";position:absolute;left:0;color:var(--off)}
+.callout{border-left:2px solid var(--def);background:rgba(53,207,224,.05);
+  padding:13px 16px;border-radius:0 10px 10px 0;margin:18px 0;font-size:14.5px;color:var(--ink-mid)}
+.callout.off{border-left-color:var(--off);background:rgba(245,165,36,.05)}
+.lnk{color:var(--def);text-decoration:none;border-bottom:1px solid rgba(53,207,224,.35);transition:.15s}
+.lnk:hover{border-bottom-color:var(--def);color:var(--off-bright)}
+.tag{font-family:"IBM Plex Mono";font-size:11px;padding:2px 8px;border-radius:5px;border:1px solid;font-weight:500;white-space:nowrap}
+.tag.wb{color:var(--off-bright);border-color:rgba(245,165,36,.35);background:rgba(245,165,36,.07)}
+.tag.bb{color:var(--def);border-color:rgba(53,207,224,.35);background:rgba(53,207,224,.07)}
+
+footer{max-width:var(--maxw);margin:30px auto 0;padding:24px 22px 60px;color:var(--ink-dim);
+  font-size:12.5px;font-family:"IBM Plex Mono";border-top:1px solid var(--line-soft)}
+footer a{color:var(--ink-dim)}
+:focus-visible{outline:2px solid var(--def);outline-offset:3px;border-radius:4px}
+
+/* essay-page helpers (Yegge field map) */
+blockquote.q{margin:20px 0;padding:16px 20px;border-left:3px solid var(--def);
+  background:var(--panel);border-radius:0 10px 10px 0;color:var(--ink);font-size:16.5px;line-height:1.55}
+blockquote.q.off{border-left-color:var(--off)}
+blockquote.q em{font-style:italic;color:var(--off-bright)}
+blockquote.q .cite{display:block;margin-top:10px;font-family:"IBM Plex Mono";font-size:12px;color:var(--ink-dim)}
+blockquote.q .cite a{color:var(--ink-dim);text-decoration:none;border-bottom:1px solid var(--line)}
+blockquote.q .cite a:hover{color:var(--def)}
+.tldr{border-left:3px solid var(--off);background:rgba(245,165,36,.05);
+  padding:14px 18px;border-radius:0 10px 10px 0;margin:0 0 26px;font-size:15px;color:var(--ink-mid)}
+.tldr b{color:var(--ink)}
+.kv{font-family:"IBM Plex Mono";font-size:12.5px;color:var(--ink-dim);margin:0 0 16px}
+
+/* field-map addition: unclassed links inside the page body follow the accent, not browser blue */
+main a:not([class]){color:var(--def);text-decoration:underline;text-decoration-color:var(--ink-dim);text-underline-offset:2px;text-decoration-thickness:1px}
+main a:not([class]):hover{text-decoration-color:var(--def)}
+
+/* interactive widgets (assets/widgets.js plus widgets/*.js): SVG text and marks on the dark theme */
+.lab svg{max-width:540px;margin-left:auto;margin-right:auto}
+.lab svg text{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;fill:var(--ink-mid)}
+.lab svg .t-dim{fill:var(--ink-dim)}
+.lab svg .t-mid{fill:var(--ink-mid)}
+.lab svg .t-ink{fill:var(--ink)}
+.lab svg .t-inv{fill:var(--bg);font-weight:600}
+.lab svg .ln-grid{stroke:var(--line);stroke-width:1}
+.lab svg .ln-def{stroke:var(--def)}
+.lab svg .ln-dim{stroke:var(--ink-dim);stroke-dasharray:3 3}
+.lab svg .bar-def{fill:var(--def)}
+.lab svg .bar-off{fill:var(--off)}
+.lab svg .bar-dim{fill:var(--ink-dim);opacity:.45}
+.lab li::before,.lab-try::before{content:none}
+
+/* the Definitions section has its own h2, so hide the list's built-in label */
+#definitions .gl-list-h{display:none}
+
+/* anchors land below the sticky top bar (taller when it wraps on narrow screens) */
+main [id]{scroll-margin-top:72px}
+@media (max-width:600px){main [id]{scroll-margin-top:112px}}
+
+/* long inline code (URLs, regexes) wraps instead of pushing the page sideways */
+main code{overflow-wrap:anywhere}
+
+/* narrow screens: the top bar holds brand, mode switch and back link; wrap instead of scrolling sideways */
+@media (max-width:600px){
+  .bar-in{flex-wrap:wrap;gap:6px 10px;padding:9px 16px}
+  .bar .brand{flex:1 0 100%;font-size:12px}
+}
+/* shared across the safety maps: Front Door link in the top bar, and mode blocks hidden before terms.js loads */
+.front-door{margin:0 auto 0 14px;font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;color:inherit;opacity:.72;text-decoration:none}.front-door:hover{opacity:1}
+@media(max-width:560px){header .bar-in,header .nav-in{flex-wrap:wrap;row-gap:6px}}
+html:is([data-tech="on"],[data-eli5="on"]) .plain-only,html:not([data-tech="on"]) .tech-only,html:not([data-eli5="on"]) .eli5-only,html[data-tech="on"] .no-tech{display:none!important}
+.asof{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim)}
+/* lists of sources, tables, anchors (from the Model Spec map) */
+.readings{padding-left:1.25em;margin:14px 0 26px}
+.readings li{margin:7px 0;line-height:1.6}
+.readings a{color:var(--def);text-decoration:none;border-bottom:1px solid var(--ink-dim)}
+.readings a:hover{border-bottom-color:var(--def)}
+table.kv{border-collapse:collapse;width:100%;margin:14px 0 26px;font-size:14px}
+table.kv th,table.kv td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-mid)}
+table.kv th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim)}
+.scroll{overflow-x:auto;margin:14px 0 26px}
+.scroll table.kv{margin:0;min-width:100%}
+section[id],h2[id],h3[id]{scroll-margin-top:72px}
+main h2,main table.kv,main .scroll,main blockquote.q,main .callout{clear:both}
