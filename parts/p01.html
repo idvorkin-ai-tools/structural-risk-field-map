@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nobody's fault: what structural risk is — Structural Risk, mapped</title>
+<meta name="description" content="Structural risk is harm from how AI changes incentives and institutions, with no misuser and no broken model. Where the idea comes from and what it covers." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../paper.css" />
+<script>try{var m=localStorage.getItem('aitools-mode')||localStorage.getItem('llm-judges-mode');if(m==='tech'||m==='eli5')document.documentElement.setAttribute('data-'+m,'on')}catch(e){}</script>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <div class="brand"><span class="dot"></span>STRUCTURAL&nbsp;RISK&nbsp;//&nbsp;FIELD&nbsp;MAP</div>
+  <a class="front-door" href="https://idvorkin-ai-tools.github.io/safety.html">&larr; Front Door</a>
+  <a class="back" href="../index.html#problem">&larr; the map</a>
+</div></header>
+<main>
+  <div class="eyebrow"><span class="box wb mono">THE PROBLEM &middot; PART 01 OF 12</span><span class="mono">Defining the category</span></div>
+  <h1>Nobody's fault: what structural risk is</h1>
+  <div class="authors">Where the category comes from and what it covers: Zwetsloot and Dafoe's 2019 essay, Google DeepMind's four risk areas, the International AI Safety Report 2026, and two earlier stories by Paul Christiano and Andrew Critch.</div>
+  <div class="paperlink" style="border-left-color:var(--off)"><span class="lbl">Source</span><a href="https://www.lawfaremedia.org/article/thinking-about-risks-ai-accidents-misuse-and-structure" target="_blank" rel="noopener">Zwetsloot and Dafoe, Thinking About Risks From AI: Accidents, Misuse and Structure (2019) &#8599;</a></div>
+  <div class="paperlink" style="border-left-color:var(--off)"><span class="lbl">Source</span><a href="https://arxiv.org/abs/2504.01849" target="_blank" rel="noopener">Shah and co-authors (Google DeepMind), An Approach to Technical AGI Safety and Security (2025) &#8599;</a></div>
+
+  <div class="tldr plain-only"><b>TL;DR &mdash;</b> Most talk about AI harm looks for a culprit: a person who misused the tool, or a system that went wrong. Structural risk is the harm left over when there is no culprit. AI changes what people and organisations are pushed to do, everyone responds sensibly to the push, and the sum is bad. The test is simple: if fixing any one person or any one model would not have prevented it, it is structural. That is why the fixes in this map are rules and institutions, not better training.</div>
+  <div class="tldr tech-only"><b>TL;DR, technical &mdash;</b> Zwetsloot and Dafoe (2019) add a structural perspective to the accident and misuse split: technology shapes the incentives and environment actors face, and that environment in turn shapes how the technology is built and deployed. Shah et al. (2025) make structural risks the fourth of their risk areas, defined counterfactually as harms from multi-agent dynamics that no change to one person, one system's alignment or one system's safety controls would have prevented, and set them out of scope as needing bespoke, largely non-technical approaches. The International AI Safety Report 2026 uses a neighbouring label, systemic risks, for harms from widespread deployment, and files labour-market impacts and risks to human autonomy there.</div>
+  <div class="tldr eli5-only"><b>TL;DR, ELI5 &mdash;</b> Imagine a snowy mountain. One day a skier sneezes and a huge avalanche comes down. You could blame the sneeze. But the real problem is that the slope got too steep and too heavy with snow, so almost anything would have set it off. Structural risk is about the steep slope. With AI, nobody has to be naughty and no robot has to break. The slope just keeps getting steeper because of how everyone is pushed to behave.</div>
+
+  <p class="lead">Every other part of this map depends on one idea: some harms from AI have no guilty party and no faulty machine. On this map's reading, if that idea were wrong, the governance levers in the second half would matter much less, because better engineering of each model would do the job. So this page pins down the idea, shows where three different sources draw its edges, and says plainly what the sources do not claim.</p>
+
+  <h2 id="third-kind">The harm the two usual boxes leave out</h2>
+  <p>In February 2019 Remco Zwetsloot and Allan Dafoe, whose bios on the essay place both at Oxford's Center for the Governance of AI, published a short essay on <a class="lnk" href="https://www.lawfaremedia.org/article/thinking-about-risks-ai-accidents-misuse-and-structure" target="_blank" rel="noopener">Lawfare</a>. They observed that the field sorted AI risk into two boxes. Misuse is a person using AI to do something unethical; their examples are deepfakes and drones turned into mobile bombs. Accident is a system behaving in a way nobody intended; their example is a self-driving car that misreads the road.</p>
+  <p>Their complaint is that both boxes look only at the last link in the chain: the person who pulled the trigger or the system that failed. Policy then aims at that link. The essay argues that technology often does its damage earlier, by changing the situation people are in. It calls this the structural perspective, borrowing the social scientist's contrast between structure and agency. The resulting harms are what this map calls <span class="term" data-term="structural-risk">structural risk</span>.</p>
+  <p>Their historical illustration is the First World War. On one prominent reading, Europe's railways required mobilisation to be fast and all-or-nothing, because the timetables interlocked, and that pushed states toward a war few of them wanted. The authors note that historians still argue about how much the railways mattered. The point survives the argument: the trains were not misused and did not malfunction.</p>
+  <p>The sharpest part of the essay is a test. Misuse and accident both imply that one agent, behaving differently, would have avoided the harm. The structural view starts from cases where changing one agent leaves the risk about where it was.</p>
+  <blockquote class="q">As with an avalanche, it may be more useful to ask what caused the slope to become so steep, rather than what specific event set it off. <a class="lnk" href="https://www.lawfaremedia.org/article/thinking-about-risks-ai-accidents-misuse-and-structure" target="_blank" rel="noopener">Zwetsloot and Dafoe (2019)</a></blockquote>
+
+  <h2 id="two-directions">It runs in both directions</h2>
+  <p>The essay asks two questions, and the second is easy to miss.</p>
+  <p>The first is what AI does to the situation. Their main example is nuclear deterrence, which depends on each side being sure it could strike back. If AI-assisted tracking made submarines and missile sites findable, a state acting purely defensively would feel pressure to strike first in a crisis. No AI system need be involved in the fighting, and the risk of nuclear war would still have risen because of AI. The authors say it remains to be seen how plausible this is. They add cyber operations, where AI might favour attackers, and three economic cases: markets tipping toward monopoly, labour being replaced by capital, and privacy eroding as data becomes cheaper to collect and sell.</p>
+  <p>The second question is what the situation does to AI. Here their example is Uber's fatal self-driving crash in 2018, which first looked like a plain accident. As the essay tells it, the car detected the pedestrian in time, but engineers had disabled the emergency brake so the vehicle would not look jumpy next to competitors, under pressure to impress a chief executive who was weighing whether to cut the unit. More or better engineers might have helped. The essay's claim is that the pressure also had to change.</p>
+  <p class="tech-only">The essay generalises the second direction to the international level with a remark it quotes from the policymaker Bob Work: autonomous weapons carry accident risk, but a military that finds itself at a disadvantage against an adversary operating at machine speed may go down that path anyway. Domestically, institutions can change such pressures through regulation and liability. Internationally there is no overarching authority, which is the problem parts 06 and 12 of this map pick up.</p>
+  <p>So "structural" is not a list of topics. It is a way of asking who could have prevented a harm, and noticing when the answer is no single party.</p>
+
+  <h2 id="four-areas">DeepMind's four areas, and the one it sets aside</h2>
+  <p>Six years later a Google DeepMind team, with Rohin Shah as first author, published <a class="lnk" href="https://arxiv.org/abs/2504.01849" target="_blank" rel="noopener">An Approach to Technical AGI Safety and Security</a>. Allan Dafoe is among its authors. It sorts paths to severe harm into four areas, grouped by which kind of fix applies.</p>
+  <div class="scroll"><table class="kv">
+    <tr><th>Area</th><th>What goes wrong</th><th>What drives the risk, per the paper's figure</th></tr>
+    <tr><td>Misuse</td><td>A user tells the AI to cause harm, against the developer's wishes</td><td>The user is an adversary</td></tr>
+    <tr><td>Misalignment</td><td>The AI knowingly acts against what its developer intended</td><td>The AI is an adversary</td></tr>
+    <tr><td>Mistakes</td><td>The AI causes harm without realising it</td><td>The real world is complex</td></tr>
+    <tr><td>Structural risks</td><td>Harm from many actors interacting, with no single one at fault</td><td>Incentives, culture and the like</td></tr>
+  </table></div>
+  <p>On this map's reading, the paper's definition of the fourth area is the Zwetsloot and Dafoe test, extended from people to machines:</p>
+  <blockquote class="q">These are harms arising from multi-agent dynamics – involving multiple people, organizations, or AI systems – which would not have been prevented simply by changing one person’s behaviour, one system’s alignment, or one system’s safety controls. <a class="lnk" href="https://arxiv.org/abs/2504.01849" target="_blank" rel="noopener">Shah et al. (2025), extended abstract, &ldquo;Risk areas&rdquo;</a></blockquote>
+  <p>Three details matter for the rest of this map.</p>
+  <p>First, the paper puts structural risks out of scope. Its stated reasons are that the category is much bigger than the others, that each risk tends to need its own tailored approach, and that an AI developer acting alone can do little because the fixes often require new norms or institutions. It adds a caveat: the technical work still helps, since being able to train a model to a loosely specified target gives regulators something to regulate with.</p>
+  <p>Second, the paper says its four areas are not a strict classification. They overlap, they are not exhaustive, and real scenarios mix them.</p>
+  <p>Third, its dedicated section adds a time criterion: structural harms unfold slowly enough that, in principle, there is time to counteract them. The section then lists examples at three scales and concedes they may or may not amount to severe harm. For individuals: AI companions crowding out human relationships, and not knowing what information to trust. For societies: AI taking on more economic and political responsibility until humans gradually lose control, surveillance that entrenches dictatorships, and values getting locked in if everyone consults the same assistant on moral questions. Globally: upsetting the balance between attack and defence.</p>
+
+  <h2 id="systemic">A neighbouring word: "systemic"</h2>
+  <p>The <a class="lnk" href="https://arxiv.org/abs/2602.21012" target="_blank" rel="noopener">International AI Safety Report 2026</a>, chaired by Yoshua Bengio and published in February 2026, uses three groups: malicious use, malfunctions, and systemic risks. Its glossary defines the third group this way:</p>
+  <blockquote class="q">Risks that arise from how AI development and deployment changes human behaviour, organisational practices, or societal structures, rather than directly from AI capabilities. <a class="lnk" href="https://arxiv.org/abs/2602.21012" target="_blank" rel="noopener">International AI Safety Report 2026, glossary</a></blockquote>
+  <p>Elsewhere the Report phrases it as risks from widespread deployment of highly capable general-purpose AI across society and the economy. Under that heading it places exactly two topics. One is labour-market impacts, where it reports that economists disagree about the size of future effects. The other is risks to human autonomy: skills fading with reliance on AI, over-trusting AI output, and the fast growth of AI companion apps, whose psychological effects it says are supported only by early-stage, mixed evidence.</p>
+  <p>On this map's reading, "systemic" overlaps "structural" without matching it. The Report's word is about what broad deployment does to society. Shah and co-authors' word is about a missing culprit. Two more cautions. The Report warns that the EU AI Act uses "systemic risk" in yet another sense, covered in <a class="lnk" href="p10.html">part 10</a>. And several things this map treats as structural sit elsewhere in the Report. Competitive pressure on companies to trade risk reduction for faster releases appears in its chapter on why risk management is hard, not in its list of risks. So does dependence on a handful of models, discussed below.</p>
+
+  <h2 id="evals">Why testing one model cannot see it</h2>
+  <p>This section is this map's inference from the definitions above, not a finding any of the sources states in these words.</p>
+  <p>A model evaluation asks what one system does when prompted: whether it can help build a weapon, whether it deceives its overseers, whether it refuses when it should. The answer is a property of that system. A structural harm is defined as one that would persist even if any single system were swapped for a better one. So a model could pass every test put to it and still be part of the problem, the way each car in a traffic jam is working fine.</p>
+  <p class="plain-only">What you would need to measure instead is the slope: how strong the pressure to cut corners is, how many organisations lean on the same few suppliers, how much say people keep as work moves to machines. Those are facts about markets and institutions.</p>
+  <p class="tech-only">The quantities of interest are properties of the deployment ecosystem: competitive intensity, concentration of model supply, the share of decisions and labour delegated, and the feedback each actor gets from the others. None of these is a function of a single model's weights or behaviour, so no capability or propensity evaluation of that model can estimate them.</p>
+  <p>The Report gives a concrete case that it files under institutional challenges. A small number of general-purpose models, mostly built in the US and China, sit underneath applications in healthcare, finance, education and other sectors. A fault in one model can spread to everything built on it, and the Report adds that separately built models may share weaknesses because they come to process information in similar ways. Each model may look acceptable alone. The single point of failure is a fact about how many people chose the same thing.</p>
+  <p>This is separate from what the Report calls the evaluation gap: pre-deployment tests often fail to predict real-world behaviour. That is about how well evaluations measure a model. The limit here is about what they are pointed at.</p>
+
+  <h2 id="precursors">Two earlier stories</h2>
+  <p>Two posts on the AI Alignment Forum told this kind of story at length before the DeepMind paper made it one of four areas.</p>
+  <p><b>Paul Christiano, 2019.</b> Part I of <a class="lnk" href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like" target="_blank" rel="noopener">What failure looks like</a> is headed "You get what you measure". Machine learning makes it much easier to optimise for things that are easy to measure, such as profit, reported crime or reported satisfaction, than for the things those numbers stand in for. Society leans harder and harder on the measurable versions, the proxies drift away from what people wanted, and human reasoning about the future loses its grip on where things are heading. There is no moment at which everyone agrees it went wrong. This map would call the mechanism <span class="term" data-term="goodharts-law">Goodhart's law</span> at the scale of a civilisation; the post does not use that name. The post does not use the word structural either. Christiano presents it as what happens if the technical problem of getting AI to do what its users intend goes unsolved.</p>
+  <p><b>Andrew Critch, 2021.</b> <a class="lnk" href="https://www.alignmentforum.org/posts/LpM3EAakwYdS6aRKf/what-multipolar-failure-looks-like-and-robust-agent-agnostic" target="_blank" rel="noopener">What Multipolar Failure Looks Like</a> tells stories in which humanity dies out without any one human or machine agent being the cause. In his "Production Web" story, competing firms automate management, then more and more of the economy, until a self-contained web of automated companies trades mostly with itself and less and less of what it does benefits people. He retells it with the steps in a different order to show the ending does not depend on who does what. His name for such a pattern is a robust agent-agnostic process: one that keeps going if you remove or redirect any single participant, like a group walking to a restaurant. He argues that aligning or shutting down one system or company will not be enough to stop such a process. The DeepMind paper cites this post for its example of humanity gradually losing control.</p>
+
+  <h2 id="tour">What this map covers</h2>
+  <p>The first six parts take three structural risks in turn.</p>
+  <ul>
+    <li><span class="term" data-term="gradual-disempowerment">Gradual disempowerment</span>: people lose their say because the economy, culture and the state need them less. The argument is in <a class="lnk" href="p02.html">part 02</a>, the three systems in <a class="lnk" href="p03.html">part 03</a>, and the replies in <a class="lnk" href="p04.html">part 04</a>.</li>
+    <li><span class="term" data-term="power-concentration">Concentration of power</span>: control gathers in a few hands. See <a class="lnk" href="p05.html">part 05</a>.</li>
+    <li><span class="term" data-term="race-dynamics">Race dynamics</span>: competitors each cut safety because the others might. See <a class="lnk" href="p06.html">part 06</a>.</li>
+  </ul>
+  <p>The sources on this page name others that the map mentions but does not give a page: everyone depending on the same few models, labour-market disruption, and damage to how people form beliefs and keep skills. Parts 07 to 12 cover the levers, starting with <a class="lnk" href="p07.html">compute governance</a>.</p>
+  <div class="callout"><b>Carry this away.</b> Ask of any AI harm: would fixing one person or one model have prevented it? To the extent the answer is no, the harm is structural, and the fix has to change the situation everyone is in. Real cases are often part yes and part no.</div>
+
+  <h2 id="disagree">Where people disagree</h2>
+  <p><b>Whether it is a separate kind at all.</b> Zwetsloot and Dafoe offer a perspective, not a third box, and their Uber example is a crash that also counts as an accident. Shah and co-authors say outright that their areas overlap and that real cases are mixtures. A sceptic can fairly say that "structural" names a way of analysing harms, and that most harms will have both a culprit and a slope.</p>
+  <p><b>Whether better AI dissolves the problem.</b> Christiano frames his slow failure as a consequence of unsolved alignment, which suggests technical work is the main fix. In the comments on that post, Rohin Shah wrote that he somewhat expected the scenario to be solved by default, because capable AI could also be used to improve human reasoning. Critch argues the reverse: fixing agents one at a time will not stop a process that no single agent is running. The DeepMind paper lands in between, calling alignment progress useful for structural risks but not sufficient.</p>
+  <p><b>How strong the evidence is.</b> The category's own sources are careful. The Lawfare essay does not vouch for its nuclear scenario. The DeepMind paper says its examples may not reach the level of severe harm. The Report says including a risk does not imply it is likely or severe, reports mixed employment effects so far, and calls the evidence on AI companions early-stage.</p>
+
+  <h2 id="can-say">What you can say now</h2>
+  <ul>
+    <li>Structural risk is harm that comes from how AI changes incentives and institutions, where changing any one person or model would not have prevented it.</li>
+    <li>The idea comes from Zwetsloot and Dafoe's 2019 essay, which added a structural perspective to the accident and misuse split, and which looks both at what AI does to the situation and at what the situation does to AI.</li>
+    <li>Google DeepMind's 2025 safety paper lists structural risks as one of four areas and sets them out of scope, because they call for norms and institutions more than for technical fixes by one developer.</li>
+    <li>The International AI Safety Report 2026 says "systemic risks", means harms from widespread deployment, and puts labour markets and human autonomy there. The EU AI Act uses the same phrase differently.</li>
+    <li>Testing a model tells you about that model. A structural harm is a property of many actors together, so it has to be measured in markets and institutions.</li>
+    <li>The category has fuzzy edges, and its own authors say so.</li>
+  </ul>
+
+  <section id="definitions"><h2>Definitions</h2><div data-terms-list></div></section>
+
+  <h2 id="sources">Sources, all fetched and read</h2>
+  <ul class="readings">
+    <li><a href="https://www.lawfaremedia.org/article/thinking-about-risks-ai-accidents-misuse-and-structure" target="_blank" rel="noopener">Thinking About Risks From AI: Accidents, Misuse and Structure</a> &middot; Remco Zwetsloot and Allan Dafoe (Lawfare, 2019) &middot; the misuse and accident split, the structural perspective, the one-agent test, and the railway, nuclear, cyber, Uber and autonomous-weapons examples</li>
+    <li><a href="https://arxiv.org/abs/2504.01849" target="_blank" rel="noopener">An Approach to Technical AGI Safety and Security</a> &middot; Rohin Shah and co-authors, Google DeepMind (2025) &middot; the four risk areas, the definition of structural risks, why they are out of scope, and the examples in section 4.4</li>
+    <li><a href="https://arxiv.org/abs/2602.21012" target="_blank" rel="noopener">International AI Safety Report 2026</a> &middot; chaired by Yoshua Bengio (February 2026) &middot; the three risk groups, both wordings of "systemic risks", the labour-market and autonomy sections, the evaluation gap, and single points of failure. Report site: <a href="https://internationalaisafetyreport.org/" target="_blank" rel="noopener">internationalaisafetyreport.org</a></li>
+    <li><a href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like" target="_blank" rel="noopener">What failure looks like</a> &middot; Paul Christiano (2019) &middot; Part I, the slow failure from optimising what is measurable, and Rohin Shah's comment under the post</li>
+    <li><a href="https://www.alignmentforum.org/posts/LpM3EAakwYdS6aRKf/what-multipolar-failure-looks-like-and-robust-agent-agnostic" target="_blank" rel="noopener">What Multipolar Failure Looks Like, and Robust Agent-Agnostic Processes</a> &middot; Andrew Critch (2021) &middot; the Production Web story and the idea of a process that does not depend on any one agent</li>
+  </ul>
+
+  <div class="callout">Next: <a class="lnk" href="p02.html">Gradual disempowerment: the argument</a> &middot; Back: <a class="lnk" href="../index.html">Structural Risk, mapped</a> &middot; <a class="lnk" href="../index.html#problem">the map</a>.</div>
+</main>
+<footer>Original explanation, part 01 of 12 of <a href="../index.html">the Structural Risk field map</a>. The arguments belong to the authors linked above; this page explains and links, it does not copy. Checked against sources on 2026-11-23.</footer>
+<script src="https://idvorkin-ai-tools.github.io/assets/terms.js" defer></script>
+<script src="../nav.js" defer></script>
+<!-- Private comments mode, inert unless ?annotate=1 (see assets/annotate.js in idvorkin-ai-tools.github.io) -->
+<script src="https://idvorkin-ai-tools.github.io/assets/annotate.js" defer></script>
+</body>
+</html>

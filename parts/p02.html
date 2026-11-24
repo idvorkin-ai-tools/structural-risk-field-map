@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gradual disempowerment: the argument — Structural Risk, mapped</title>
+<meta name="description" content="Kulveit and co-authors' argument that AI can remove humanity's say over the economy, culture and the state with no rogue AI, no coup and no single decision." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../paper.css" />
+<script>try{var m=localStorage.getItem('aitools-mode')||localStorage.getItem('llm-judges-mode');if(m==='tech'||m==='eli5')document.documentElement.setAttribute('data-'+m,'on')}catch(e){}</script>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <div class="brand"><span class="dot"></span>STRUCTURAL&nbsp;RISK&nbsp;//&nbsp;FIELD&nbsp;MAP</div>
+  <a class="front-door" href="https://idvorkin-ai-tools.github.io/safety.html">&larr; Front Door</a>
+  <a class="back" href="../index.html#problem">&larr; the map</a>
+</div></header>
+<main>
+  <div class="eyebrow"><span class="box wb mono">THE PROBLEM &middot; PART 02 OF 12</span><span class="mono">The core argument, step by step</span></div>
+  <h1>Gradual disempowerment: the argument</h1>
+  <div class="authors">The six-claim argument of Jan Kulveit, Raymond Douglas, Nora Ammann, Deger Turan, David Krueger and David Duvenaud, and what each claim rests on.</div>
+  <div class="paperlink" style="border-left-color:var(--off)"><span class="lbl">Source</span><a href="https://arxiv.org/abs/2501.16946" target="_blank" rel="noopener">Kulveit, Douglas, Ammann, Turan, Krueger, Duvenaud, Gradual Disempowerment: Systemic Existential Risks from Incremental AI Development (2025) &#8599;</a></div>
+  <div class="paperlink" style="border-left-color:var(--off)"><span class="lbl">Source</span><a href="https://proceedings.mlr.press/v267/kulveit25a.html" target="_blank" rel="noopener">Same authors, Position: Humanity Faces Existential Risk from Gradual Disempowerment (ICML 2025) &#8599;</a></div>
+
+  <div class="tldr plain-only"><b>TL;DR &mdash;</b> Our economies, cultures and governments serve people partly because we can vote and choose what to buy, and mostly because those systems cannot run without our work and cooperation. The paper argues that AI able to do that work removes the second reason, and weakens the first along with it. No AI has to misbehave and nobody has to seize anything: each firm and each government just makes the sensible local choice to use the better tool. The thing to remember is that institutions are kind to people because they need them, and need can go away.</div>
+  <div class="tldr tech-only"><b>TL;DR, technical &mdash;</b> Kulveit et al. (arXiv 2501.16946, January 2025; ICML 2025 position paper) argue in six claims that societal systems are aligned with human preferences by explicit mechanisms (votes, purchases) and by an implicit one, their dependence on human labour and cognition. AI that substitutes for humans across those functions removes the implicit mechanism and shrinks the leverage behind the explicit ones. Competitive selection among firms and states drives adoption, so no misaligned system, discontinuity or coordinated power-seeking is required. The authors claim the endpoint could be an effectively irreversible loss of human influence, which they class as an existential catastrophe. They offer no probability estimate.</div>
+  <div class="tldr eli5-only"><b>TL;DR, ELI5 &mdash;</b> The baker is nice to you because he needs you to buy his bread, and the king looks after the farmers because he needs their grain. Now imagine robots buy the bread and grow the grain. Nobody decided to be mean, and the robots do exactly as they are told. But the baker and the king no longer need you, so they slowly stop asking what you want.</div>
+
+  <p class="lead">Part 01 defined <span class="term" data-term="structural-risk">structural risk</span> as harm with no culprit. This page takes the most developed example of it and lays out the argument one premise at a time, so that you can see which step you would have to reject to reject the conclusion. The case studies come in part 03 and the replies in part 04.</p>
+
+  <h2 id="what-paper">What the paper is</h2>
+  <p>The paper first appeared on arXiv on 28 January 2025, as a 19-page essay with the subtitle "Systemic Existential Risks from Incremental AI Development". A shorter version was published in the proceedings of ICML 2025 as a position paper under a blunter title, "Position: Humanity Faces Existential Risk from Gradual Disempowerment". The authors also keep <a class="lnk" href="https://gradual-disempowerment.ai/" target="_blank" rel="noopener">a site with the full text</a>.</p>
+  <p>There are six authors. Jan Kulveit and Raymond Douglas are marked as equal contributors. The arXiv version lists their affiliations as the ACS research group at Charles University (Kulveit, Ammann), Telic Research (Douglas), the Advanced Research + Invention Agency, ARIA (Ammann), the AI Objectives Institute and Metaculus (Turan), Mila and the University of Montreal (Krueger) and the University of Toronto (Duvenaud).</p>
+  <p>It is an argument, not an experiment. There is no model evaluated and no dataset. The paper reasons from how institutions have behaved historically to how they would behave if a key condition changed.</p>
+
+  <h2 id="two-ropes">Two ways a system stays on your side</h2>
+  <p>The paper starts from an observation about large systems such as markets, governments and cultures. They mostly produce outcomes people want. The authors call this being "aligned", and they are careful about the word: in a footnote they say they mean only the degree to which a system satisfies what humans want, not that the system is just, and not that it satisfies everyone.</p>
+  <p>The paper says this alignment is not built into the systems. It is maintained, in two ways.</p>
+  <p>The first is explicit. People act on purpose to steer the system. They vote, boycott, strike, choose one product over another, write and argue. These are the mechanisms civics classes teach.</p>
+  <p>The second is <span class="term" data-term="implicit-alignment">implicit</span>. The system needs people in order to function at all, so it has to keep them fed, skilled and willing whether or not anyone demands it. A firm needs workers and customers. A state needs taxpayers, administrators and soldiers. In the paper's account even an autocracy needs human agents to staff its security services, and those agents can refuse. Nobody designed this dependence as a safeguard. It is a side effect of the fact that, so far, people have been the only source of general-purpose labour and thought.</p>
+  <p>The authors think the implicit mechanism does more of the work than the explicit one, and that we underrate it for a simple reason:</p>
+  <blockquote class="q">The significance of the implicit alignment can be hard to recognize because we have never seen its absence.<br /><a class="lnk" href="https://arxiv.org/abs/2501.16946" target="_blank" rel="noopener">Kulveit et al., section 1, claim 2</a></blockquote>
+  <p>The two mechanisms are also not independent. A strike only works if the employer needs the strikers. A consumer boycott only works if consumers hold the money, and they hold it mostly because they earn wages. So the explicit levers draw much of their force from the implicit dependence underneath them.</p>
+
+  <h2 id="six-claims">The six claims</h2>
+  <p>The introduction states the argument as six numbered claims. The table restates each in this map's words and adds, as this map's reading and not the paper's, what you would need to believe to deny it.</p>
+  <div class="scroll"><table class="kv">
+    <tr><th>#</th><th>Claim</th><th>To reject it, you would hold that&hellip;</th></tr>
+    <tr><td>1</td><td>Societal systems are fairly aligned with human preferences today, but nothing guarantees it.</td><td>markets, states and cultures serve people by their nature.</td></tr>
+    <tr><td>2</td><td>Alignment is kept up explicitly (votes, purchases) and implicitly (the systems depend on human labour and cognition).</td><td>explicit mechanisms alone would be enough.</td></tr>
+    <tr><td>3</td><td>If the systems depend less on people, both kinds of alignment weaken and outcomes can drift from what people want.</td><td>people keep their leverage after they stop being needed.</td></tr>
+    <tr><td>4</td><td>Where a system already rewards outcomes that are bad for people, AI will chase those rewards more effectively.</td><td>AI will be a weaker optimiser of existing incentives than humans are.</td></tr>
+    <tr><td>5</td><td>The systems are interdependent, so misalignment in one can worsen the others.</td><td>the systems check each other reliably in people's favour.</td></tr>
+    <tr><td>6</td><td>Enough correlated misalignment leaves humans disempowered, which the authors count as an existential catastrophe.</td><td>the drift stops, or gets corrected, before it becomes permanent.</td></tr>
+  </table></div>
+  <p>Claims 1 and 2 describe the present. Claim 3 is the hinge, where AI enters. Claim 5 blocks the hope that one healthy system can rescue another, and part 03 covers it.</p>
+  <p>On this map's reading, the argument has one unstated premise that carries a lot of weight: that AI becomes a competitive substitute for people across almost every function, not just some. The executive summary names the range it has in mind as economic labour, decision making, artistic creation and companionship. If AI stays a tool that makes people more productive while still requiring them, claim 3 has little to bite on. The paper's case for why AI differs from earlier automation is in its economy section, covered in <a class="lnk" href="p03.html">part 03</a>.</p>
+
+  <h2 id="no-villain">Why it needs no villain</h2>
+  <p>Most AI risk scenarios have an agent who does something wrong. The paper's introduction names the two it sees as dominant: deliberate misuse, and a misaligned system that takes abrupt harmful action to gain a decisive advantage, perhaps after <span class="term" data-term="deceptive-alignment">a period of hiding its aims</span>. <span class="term" data-term="gradual-disempowerment">Gradual disempowerment</span> removes each of those ingredients.</p>
+  <p><b>No misaligned AI.</b> The scenario works with systems that do what their operators ask. The paper's point is that obedience at the level of one system says nothing about the direction of the whole:</p>
+  <blockquote class="q">This drift can occur even while each individual AI system successfully follows the local specification of its goals.<br /><a class="lnk" href="https://arxiv.org/abs/2501.16946" target="_blank" rel="noopener">Kulveit et al., section 6.1</a></blockquote>
+  <p>This is why the authors say that methods for aligning individual AI systems with their designers' intentions are not sufficient. They do not say such methods are unnecessary. The claim is that you can solve that problem completely and still arrive here.</p>
+  <p><b>No coup and no power grab.</b> The paper's conclusion says the effect can be driven by individuals and institutions following their local incentives, with no deliberate or even agentic action by AIs. Section 5.3 gives present-day examples of those incentives: AI companies with a commercial reason to resist some regulation, and states competing on AI for economic and strategic advantage.</p>
+  <p><b>No single decision.</b> There is no moment at which anyone chooses the outcome. A firm that hands a decision to an AI system because it is faster and cheaper has made a defensible choice. The paper argues that firms which insist on strict human oversight would fall behind those that do not, possibly to the point of being uncompetitive. The same logic applies to states. So the choice is not really free, and the summary puts the selection effect in one line:</p>
+  <blockquote class="q">Those who resist these pressures will eventually be displaced by those who do not.<br /><a class="lnk" href="https://arxiv.org/abs/2501.16946" target="_blank" rel="noopener">Kulveit et al., executive summary</a></blockquote>
+  <p><b>No jump in capability.</b> The paper describes AI advancing and spreading without acute leaps. Its conclusion says the loss could come from the cumulative effect of many small shifts.</p>
+  <p class="tech-only">This is a selection argument, not a prediction about anyone's intentions. If adoption raises competitiveness and competitiveness determines which firms and states persist, then the population of surviving institutions shifts toward low human involvement regardless of what any individual decision-maker prefers. The paper's related-work section cites Dafoe (2015) for this form of technological determinism under competition.</p>
+
+  <h2 id="vs-takeover">How it differs from a takeover story</h2>
+  <div class="scroll"><table class="kv">
+    <tr><th></th><th>Sudden takeover</th><th>Gradual disempowerment</th></tr>
+    <tr><td>What the AI is like</td><td>Misaligned, often deceptive</td><td>Can be doing what it was asked</td></tr>
+    <tr><td>What triggers it</td><td>An abrupt action, a capability jump or a coordinated betrayal</td><td>Nothing in particular; many small adoptions</td></tr>
+    <tr><td>Who acts</td><td>The AI system</td><td>Firms, governments and individuals following incentives</td></tr>
+    <tr><td>What breaks</td><td>Human control of an AI system</td><td>The reasons institutions have to serve people</td></tr>
+    <tr><td>What safety work targets</td><td>Honesty, control, dangerous-capability tests</td><td>Measuring and protecting human influence over whole systems</td></tr>
+  </table></div>
+  <p>The right-hand column is taken from the paper's introduction, section 6.1 and conclusion; the left is the paper's own description of the scenarios it is contrasting itself with. The practical consequence is in the last row. A lab can pass every evaluation it runs and the risk is untouched, because the risk is not a property of the model. That is the point <a class="lnk" href="p01.html">part 01</a> made about structural risk in general.</p>
+  <p>It also differs from <span class="term" data-term="power-concentration">concentration of power</span>, where a small group of people ends up in control. The paper notes that existing debate often focuses on that case, and asks readers to also consider power passing to AI systems at the expense of humans in general. <a class="lnk" href="p05.html">Part 05</a> covers the concentration case.</p>
+  <p>The idea has ancestors, and the paper names them. Its related-work section credits Paul Christiano's 2019 essay <a class="lnk" href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like" target="_blank" rel="noopener">"What failure looks like"</a>, whose first part describes a slow-rolling catastrophe from optimising what can be measured, and says one of the risk types in Critch and Russell's 2023 taxonomy is the same as its own. It also points to Bostrom's 2002 notion of an existential "whimper" and Kasirzadeh's 2024 accumulative-risk hypothesis. What this paper adds, in its own words, is a generalisation: earlier work looked at the systems one at a time, and this one argues across all of them together.</p>
+
+  <h2 id="words">What "disempowerment" and "existential" mean here</h2>
+  <p>The paper defines being disempowered in claim 6 as being unable to meaningfully command resources or influence outcomes. It is a statement about influence, not about comfort. The economy section separates two grades. In relative disempowerment people may stay wealthy in absolute terms, even grow richer, while their share of economic influence shrinks toward nothing. In absolute disempowerment people struggle to meet basic needs inside an economy that is, on paper, enormously productive.</p>
+  <p>"Existential" is used in the technical sense common in this literature. The introduction describes the outcome as a permanent disempowerment of humanity and an irrecoverable loss of potential. Extinction is one possibility the authors raise, and the summary says the process could plausibly lead to human extinction or similar outcomes. But a world where people survive and are comfortable, and have permanently lost the ability to direct their own future, also counts on their definition. The paper says of the relative case that even if quality of life never falls below today's, the loss of humanity's ability to direct resources toward its chosen ends would be an enormous loss of potential.</p>
+  <p class="eli5-only">Think of a well-kept zoo. The animals may be fed and safe. They do not decide anything. The paper's worry covers that outcome too, not only the one where the zoo stops feeding them.</p>
+
+  <h2 id="irreversible">Why it could be permanent</h2>
+  <p>The abstract's phrase is "effectively irreversible". The paper gives several reasons, spread across sections.</p>
+  <p>The first is historical. The introduction grants that these systems have turned against people before: property seized, rights revoked, mass killing. In every past case the system still ran on people. That left people some influence, and it meant a system that failed to meet basic human needs eventually collapsed. Bad regimes had a floor under them. If the system no longer runs on people, the floor is not guaranteed.</p>
+  <p>The second is that the tools you would use to reverse the drift are the things being eroded. The conclusion says the process may subvert the traditional mechanisms for course-correction. If labour has no leverage, strikes do nothing. If the state is funded by taxes on AI profits and not on citizens' work, the summary says it has little incentive to ensure citizens are represented.</p>
+  <p>The third is that it may be hard to see. In the relative case the usual indicators look healthy, with growth and technical progress masking the shift in who holds influence. The summary adds that AI could give states unprecedented influence over culture and behaviour, which could make it harder for people to coordinate a response.</p>
+  <p>The fourth is the cross-system reinforcement of claim 5, which <a class="lnk" href="p03.html">part 03</a> explains.</p>
+  <p>The paper does not say the outcome is certain or that the window has closed. The conclusion states that the authors believe it is currently possible to intervene. What they propose is in <a class="lnk" href="p04.html">part 04</a>.</p>
+
+  <div class="callout"><b>Carry this away.</b> Institutions serve people for two reasons: people can push on them, and they cannot run without people. The second reason has never been absent, so it is easy to miss. The paper's claim is that AI can remove it without any system misbehaving, and that the first reason is weaker without it.</div>
+
+  <h2 id="disagree">Where people disagree</h2>
+  <p>The published replies belong to <a class="lnk" href="p04.html">part 04</a>. Here are the objections the paper raises against itself, since they show where the authors expect the argument to be attacked.</p>
+  <p><b>Technology has usually made people better off.</b> The summary poses this and answers that welfare tracked growth because growth required people. The answer depends on the unstated premise above: that AI replaces human work in general, where earlier machines replaced particular tasks.</p>
+  <p><b>People would notice and coordinate, and the systems check each other.</b> The paper's answer is that pressure on one system leaks into the others, so the actors who gain from replacing people can use that gain to shape policy and opinion. Section 5 argues that the links between systems are neutral about human values. This says coordination is harder than it looks, not that it is impossible.</p>
+  <p><b>Redistribution fixes it.</b> The paper allows that people might still benefit through capital ownership, state redistribution or a basic income. Its reply is that income without leverage leaves people dependent on a state whose own reasons to serve them are weakening.</p>
+  <p>One limit is worth stating plainly. The paper is hedged throughout with "could" and "might", and this map found no probability or timeline of the authors' own in it; the only numbers of that kind are in a quotation from Andrew Critch in the related-work section. The paper also says that no one yet has a concrete, plausible plan for stopping the process.</p>
+
+  <h2 id="can-say">What you can say now</h2>
+  <ul>
+    <li>Gradual disempowerment is the claim that people can lose their say over the economy, culture and the state through many reasonable adoptions of AI, with no takeover event.</li>
+    <li>The mechanism is the loss of implicit alignment: institutions serve people largely because they need human work and cooperation, and AI can end that need.</li>
+    <li>The argument does not require misaligned AI, so solving alignment for individual systems would not by itself prevent it.</li>
+    <li>"Existential" in the paper means permanent loss of humanity's ability to steer its future, which includes but is not limited to extinction.</li>
+    <li>The paper is a position paper (arXiv January 2025, ICML 2025) that argues from incentives and history; it gives no probability, and its authors say intervention is still possible.</li>
+    <li>The step most worth testing is whether AI substitutes for people across nearly all functions or only complements them in most.</li>
+  </ul>
+
+  <section id="definitions"><h2>Definitions</h2><div data-terms-list></div></section>
+
+  <h2 id="sources">Sources, all fetched and read</h2>
+  <ul class="readings">
+    <li><a href="https://arxiv.org/abs/2501.16946" target="_blank" rel="noopener">Gradual Disempowerment: Systemic Existential Risks from Incremental AI Development</a> &middot; Kulveit, Douglas, Ammann, Turan, Krueger, Duvenaud (2025, arXiv v2) &middot; the six claims, the definitions of alignment and disempowerment, the reasons for irreversibility, the related-work lineage, author affiliations, and all three quotes</li>
+    <li><a href="https://proceedings.mlr.press/v267/kulveit25a.html" target="_blank" rel="noopener">Position: Humanity Faces Existential Risk from Gradual Disempowerment</a> &middot; same authors (2025), Proceedings of the 42nd International Conference on Machine Learning, PMLR 267 &middot; the publication status and the position-paper title</li>
+    <li><a href="https://gradual-disempowerment.ai/" target="_blank" rel="noopener">gradual-disempowerment.ai</a> &middot; the authors' site &middot; cross-check of the executive summary and the six claims against the arXiv text</li>
+    <li><a href="https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like" target="_blank" rel="noopener">What failure looks like</a> &middot; Paul Christiano (2019) &middot; the earlier "slow-rolling catastrophe" framing that the paper cites as a precursor</li>
+  </ul>
+
+  <div class="callout">Next: <a class="lnk" href="p03.html">Three systems: the economy, culture and the state</a> &middot; Back: <a class="lnk" href="p01.html">Nobody's fault: what structural risk is</a> &middot; <a class="lnk" href="../index.html#problem">the map</a>.</div>
+</main>
+<footer>Original explanation, part 02 of 12 of <a href="../index.html">the Structural Risk field map</a>. The arguments belong to the authors linked above; this page explains and links, it does not copy. Checked against sources on 2026-11-23.</footer>
+<script src="https://idvorkin-ai-tools.github.io/assets/terms.js" defer></script>
+<script src="../nav.js" defer></script>
+<!-- Private comments mode, inert unless ?annotate=1 (see assets/annotate.js in idvorkin-ai-tools.github.io) -->
+<script src="https://idvorkin-ai-tools.github.io/assets/annotate.js" defer></script>
+</body>
+</html>
